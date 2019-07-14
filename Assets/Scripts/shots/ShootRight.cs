@@ -8,7 +8,8 @@ public class ShootRight : MonoBehaviour
     public Rigidbody2D rb;
     public int Pspeed;
     [SerializeField] public GameObject player;
-
+    public float damage;
+    public GameObject impactEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,4 +27,19 @@ public class ShootRight : MonoBehaviour
         //shoots right
         
     }
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+
+        enemy enemy = hitInfo.GetComponent<enemy>();
+        if (enemy != null)
+        {
+            
+            enemy.TakeDamage(damage);
+        }
+
+        //Instantiate(impactEffect, transform.position, transform.rotation);
+
+        Destroy(gameObject);
+    }
+
 }

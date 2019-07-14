@@ -12,6 +12,7 @@ public class enemy : MonoBehaviour
     public float curHp;
     public float maxHP;
     public float damage;
+    public GameObject deathEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class enemy : MonoBehaviour
     {
         if (curHp <= 0)
         {
-            GameObject.Destroy(this);
+            Die();
         }
         rb.velocity = new Vector2(speed, 0.0f);
         // moving = true;
@@ -35,30 +36,20 @@ public class enemy : MonoBehaviour
 
     }
 
-    public void takeDamage(float amount)
+    public void TakeDamage(float damage)
     {
-        if (!alive)
-        {
-            return;
-        }
+        
+        curHp -= damage;
+        print(curHp);
         if (curHp <= 0)
         {
-            curHp = 0;
-            alive = false;
+            Die();
         }
-        curHp -= amount;
-        
     }
 
-
-    void OnTriggerEnter2D(Collider2D col)
+    void Die()
     {
-        print("fish");
-
-        if (col.gameObject.tag == "Proj")
-        {
-            curHp -= 20;
-          //  Destroy();
-        }
+        //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

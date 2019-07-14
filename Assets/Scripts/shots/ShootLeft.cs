@@ -9,6 +9,7 @@ public class ShootLeft : MonoBehaviour
     public int Pspeed;
     [SerializeField] public GameObject player;
     public float damage;
+    public GameObject impactEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +28,20 @@ public class ShootLeft : MonoBehaviour
       
     }
 
-    void onTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        print("dog");
-        other.gameObject.GetComponent<enemy>().takeDamage(damage);
+        
+        enemy enemy = hitInfo.GetComponent<enemy>();
+        if (enemy != null)
+        {
+            
+            enemy.TakeDamage(damage);
+        }
+
+        //Instantiate(impactEffect, transform.position, transform.rotation);
+
+        Destroy(gameObject);
     }
+
 
 }
