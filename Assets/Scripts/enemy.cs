@@ -33,7 +33,7 @@ public class enemy : MonoBehaviour
 
         DimenstionControl = GameObject.Find("dimension Control");
 
-        print(DimenstionControl);
+
 
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
