@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 916bc57076ebf664ab88221b13730d46
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7824181192436362364
+    second: dimhungirlspritesheet_0
+  - first:
+      213: 5982562961352866495
+    second: dimhungirlspritesheet_1
+  - first:
+      213: 6623648327573734305
+    second: dimhungirlspritesheet_2
+  - first:
+      213: -8269468744831104145
+    second: dimhungirlspritesheet_3
+  - first:
+      213: 4278569222133301683
+    second: dimhungirlspritesheet_4
+  - first:
+      213: -3573121904666616645
+    second: dimhungirlspritesheet_5
+  - first:
+      213: 6815090579988850015
+    second: dimhungirlspritesheet_6
+  - first:
+      213: -7058894243867722288
+    second: dimhungirlspritesheet_7
+  - first:
+      213: -2603888912810472387
+    second: dimhungirlspritesheet_8
+  - first:
+      213: -7702310571553801800
+    second: dimhungirlspritesheet_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +70,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +99,252 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 192
+        width: 17
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf97d02e522a104abd2cb4f926582c7
+      internalID: -7824181192436362364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 25
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75729abdadb3ffb49ac204b76b358e2c
+      internalID: 5982562961352866495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 192
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72082faef9b9254991140c42ff00bce
+      internalID: 6623648327573734305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 187
+        width: 18
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3d7c7c029afff4ba094c3b8382c380
+      internalID: -8269468744831104145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 192
+        width: 20
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bbf7e737f2abc49af47323f751c546
+      internalID: 4278569222133301683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 154
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2b6fee2169bca42b37c1a34bf12b7f
+      internalID: -3573121904666616645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 154
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.3783847, y: -0.00000052616514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e605576b9edd3a342986a20efa81cced
+      internalID: 6815090579988850015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 154
+        width: 20
+        height: 30
+      alignment: 9
+      pivot: {x: 0.4155445, y: -0.00000050862633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddb78e444b167348b4c4cfeb8df2160
+      internalID: -7058894243867722288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 154
+        width: 26
+        height: 29
+      alignment: 9
+      pivot: {x: 0.33108962, y: 0.011648244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c560d934420b79f44b09fc7cd9728a21
+      internalID: -2603888912810472387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimhungirlspritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 115
+        width: 21
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2022fdb3faeae9f458d66b6fbcd1724c
+      internalID: -7702310571553801800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -84,7 +357,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
