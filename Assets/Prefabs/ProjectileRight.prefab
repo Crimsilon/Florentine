@@ -144,5 +144,5 @@ MonoBehaviour:
   rb: {fileID: 0}
   Pspeed: 15
   player: {fileID: 0}
-  damage: 25
+  damage: 100
   impactEffect: {fileID: 0}

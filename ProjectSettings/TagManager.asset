@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Proj
   - Red
+  - Hub
   layers:
   - Default
   - TransparentFX
