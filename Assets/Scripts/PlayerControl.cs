@@ -10,11 +10,11 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private Transform m_GroundCheck;                           // location to determin where the ground is
     // Start is called before the first frame update
     private float moveInput;
-    public int moveSpeed;
-    public int jumpPower;
+    public float moveSpeed;
+    public float jumpPower;
     public bool facingRight;
     public bool grounded= false;
-    const float k_GroundedRadius = .2f;                     // Radius of the overlap circle to determine if grounded
+    const float k_GroundedRadius = .1f;                     // Radius of the overlap circle to determine if grounded
 
     // Update is called once per frame
 
