@@ -13,12 +13,26 @@ public class enemy : MonoBehaviour
     public float maxHP;
     public float damage;
     public GameObject deathEffect;
+    public bool RedCreature;
+    public GameObject DimenstionControl;
     // Start is called before the first frame update
     void Start()
     {
+        if (gameObject.tag.Equals("Red"))
+        {
+            RedCreature = true;
+        }
+        else
+        {
+            RedCreature = false;
+        }
         // rb = gameObject.AddComponent<Rigidbody2D>() as Rigidbody2D;
         curHp = maxHP;
         // rb.bodyType = RigidbodyType2D.Dynamic;
+
+        DimenstionControl = GameObject.Find("dimension Control");
+
+        print(DimenstionControl);
 
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -38,12 +52,22 @@ public class enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        
-        curHp -= damage;
-        print(curHp);
-        if (curHp <= 0)
-        {
-            Die();
+        if (RedCreature == true && !DimenstionControl.GetComponent<WorldSwap>().blueActive) {
+            curHp -= damage;
+            print(curHp);
+            if (curHp <= 0)
+            {
+                Die();
+            }
+        }
+        if(RedCreature!=true&& DimenstionControl.GetComponent<WorldSwap>().blueActive) {
+            curHp -= damage;
+            print(curHp);
+            if (curHp <= 0)
+            {
+                Die();
+            }
+
         }
     }
 
