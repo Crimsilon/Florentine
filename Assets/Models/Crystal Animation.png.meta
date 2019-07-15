@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: dfcf99c9173ef234da668f139a1ab91b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6148043175162637117
+    second: Crystal Animation_0
+  - first:
+      213: -7678524216923831832
+    second: Crystal Animation_1
+  - first:
+      213: 6567283253704544388
+    second: Crystal Animation_2
+  - first:
+      213: -6351780631990949379
+    second: Crystal Animation_4
+  - first:
+      213: 1110906936609837801
+    second: Crystal Animation_6
+  - first:
+      213: 2547708394627105925
+    second: Crystal Animation_9
+  - first:
+      213: -4544891692201783125
+    second: Crystal Animation_11
+  - first:
+      213: -1113961636079407561
+    second: Crystal Animation_13
+  - first:
+      213: 4683571545015078070
+    second: Crystal Animation_15
+  - first:
+      213: -128887023648098380
+    second: Crystal Animation_16
+  - first:
+      213: -7735381613291757715
+    second: Crystal Animation_19
+  - first:
+      213: -6673213631037919277
+    second: Crystal Animation_20
+  - first:
+      213: 4175176187724656374
+    second: Crystal Animation_21
+  - first:
+      213: -5429615355782018548
+    second: Crystal Animation_22
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,7 +146,301 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Crystal Animation_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 105
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6303b4361768396489477d3af927ec23
+      internalID: -6148043175162637117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 105
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6830db85dafc3634cbc5fb21dee243c1
+      internalID: -7678524216923831832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 105
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434561ec6123dd84aa5cc26e1dbc0130
+      internalID: 6567283253704544388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 104
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b57756828b55443a3839f72d81855d
+      internalID: -6351780631990949379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_6
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 104
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbeab56978db324c9e622eb0eb59217
+      internalID: 1110906936609837801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_9
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 56
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ec47b1636e3ae4a94e68e2410b23fe
+      internalID: 2547708394627105925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_11
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 55
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca80dc339a31ae4479e1484e337facaf
+      internalID: -4544891692201783125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_13
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 55
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79cda6f765b3062489bf79aef086f097
+      internalID: -1113961636079407561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_15
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 55
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7700386f8807bb4099f50b22c14199e
+      internalID: 4683571545015078070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_16
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 56
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ada5ce26aa82f343b2b6766c6e5200c
+      internalID: -128887023648098380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_19
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 8
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21f38bcd997849449c41dbd8282407e
+      internalID: -7735381613291757715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_20
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 8
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e592948ada9ed4f9485fc611f803eb
+      internalID: -6673213631037919277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_21
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 9
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58acb4ed43545734abff36ebc72c2474
+      internalID: 4175176187724656374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Animation_22
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 9
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c1d2574633e3e439c760e670bb5c01
+      internalID: -5429615355782018548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
