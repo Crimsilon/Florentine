@@ -33,9 +33,9 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
+
         moveInput = Input.GetAxis("Horizontal");
         
-
         Jump();
         
         Vector2 movement = new Vector2(moveInput * moveSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
