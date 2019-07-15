@@ -15,7 +15,8 @@ public class PlayerControl : MonoBehaviour
     public bool facingRight;
     public bool grounded= false;
     const float k_GroundedRadius = .1f;                     // Radius of the overlap circle to determine if grounded
-
+    public Animator animator;
+    
     // Update is called once per frame
 
     private void FixedUpdate()
@@ -41,6 +42,8 @@ public class PlayerControl : MonoBehaviour
         Vector2 movement = new Vector2(moveInput * moveSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 
         gameObject.GetComponent<Rigidbody2D>().velocity = movement;
+
+        animator.SetFloat("Speed", Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x));
 
         if (facingRight == false && moveInput > 0)
         {
