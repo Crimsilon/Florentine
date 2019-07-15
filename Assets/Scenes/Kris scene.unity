@@ -316,7 +316,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 0.58189106
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -340,7 +340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762004067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -1.25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -615,7 +615,7 @@ PrefabInstance:
     - target: {fileID: 827572379675779307, guid: 4ec6e37b74cd86d4bb9f68651bc6b4a1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.078
+      value: -1.24
       objectReference: {fileID: 0}
     - target: {fileID: 827572379675779307, guid: 4ec6e37b74cd86d4bb9f68651bc6b4a1,
         type: 3}
@@ -718,6 +718,11 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 827572379675779303, guid: 4ec6e37b74cd86d4bb9f68651bc6b4a1,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1503365390}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ec6e37b74cd86d4bb9f68651bc6b4a1, type: 3}
 --- !u!1 &1503365383 stripped

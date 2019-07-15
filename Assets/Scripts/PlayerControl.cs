@@ -43,7 +43,7 @@ public class PlayerControl : MonoBehaviour
 
         gameObject.GetComponent<Rigidbody2D>().velocity = movement;
 
-        animator.SetFloat("Speed", Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x));
+        animator.SetFloat("Speed", (Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x)/10));
 
         if (facingRight == false && moveInput > 0)
         {
