@@ -15,6 +15,7 @@ public class enemy : MonoBehaviour
     public GameObject deathEffect;
     public bool RedCreature;
     public GameObject DimenstionControl;
+    public float hubDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,7 @@ public class enemy : MonoBehaviour
 
         DimenstionControl = GameObject.Find("dimension Control");
 
-        print(DimenstionControl);
+
 
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -75,5 +76,22 @@ public class enemy : MonoBehaviour
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+
+        Hub enemy = hitInfo.GetComponent<Hub>();
+        if (enemy != null)
+        {
+
+            enemy.TakeDamage(damage);
+        }
+
+        //Instantiate(impactEffect, transform.position, transform.rotation);
+        if (enemy.tag == "Hub")
+        {
+            Destroy(gameObject);
+        }
     }
 }

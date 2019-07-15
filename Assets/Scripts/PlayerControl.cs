@@ -10,12 +10,13 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private Transform m_GroundCheck;                           // location to determin where the ground is
     // Start is called before the first frame update
     private float moveInput;
-    public int moveSpeed;
-    public int jumpPower;
+    public float moveSpeed;
+    public float jumpPower;
     public bool facingRight;
     public bool grounded= false;
-    const float k_GroundedRadius = .2f;                     // Radius of the overlap circle to determine if grounded
-
+    const float k_GroundedRadius = .1f;                     // Radius of the overlap circle to determine if grounded
+    public Animator animator;
+    
     // Update is called once per frame
 
     private void FixedUpdate()
@@ -33,14 +34,18 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
+
         moveInput = Input.GetAxis("Horizontal");
         
-
         Jump();
         
         Vector2 movement = new Vector2(moveInput * moveSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 
         gameObject.GetComponent<Rigidbody2D>().velocity = movement;
+
+        animator.SetFloat("Speed", (Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x)/10));
+
+
 
         if (facingRight == false && moveInput > 0)
         {

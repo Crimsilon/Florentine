@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: f711a28a3902b1749bf4cdba660488e3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1899564089262211638
+    second: warewolfSpritesheet_0
+  - first:
+      213: 6993848738570039913
+    second: warewolfSpritesheet_1
+  - first:
+      213: 8082006197473420361
+    second: warewolfSpritesheet_2
+  - first:
+      213: -1608827077424800496
+    second: warewolfSpritesheet_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,7 +116,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: warewolfSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 6
+        width: 19
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e61fafcabd646e419cd60ac5703256a
+      internalID: -1899564089262211638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolfSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 6
+        width: 21
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837d6d4cb8a67554880aa7250137e37d
+      internalID: 6993848738570039913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolfSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 6
+        width: 19
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d48b19a17e931043a5a223ffadf9e28
+      internalID: 8082006197473420361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolfSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 5
+        width: 21
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bd0b9afb9cf914894a864d95815842
+      internalID: -1608827077424800496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

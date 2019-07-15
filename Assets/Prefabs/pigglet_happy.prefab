@@ -50,9 +50,12 @@ MonoBehaviour:
   alive: 1
   curHp: 0
   maxHP: 100
-  damage: 0
+  damage: 10
   deathEffect: {fileID: 1755349173569476, guid: b91f17435d332004b9cf72c40774b59a,
     type: 3}
+  RedCreature: 0
+  DimenstionControl: {fileID: 0}
+  hubDamage: 10
 --- !u!50 &28575932483195791
 Rigidbody2D:
   serializedVersion: 4
