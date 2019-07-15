@@ -45,6 +45,8 @@ public class PlayerControl : MonoBehaviour
 
         animator.SetFloat("Speed", (Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x)/10));
 
+
+
         if (facingRight == false && moveInput > 0)
         {
             flip();
