@@ -45,7 +45,8 @@ public class enemy : MonoBehaviour
         {
             Die();
         }
-        rb.velocity = new Vector2(speed, 0.0f);
+
+        rb.velocity = new Vector2(speed, rb.velocity.y);
         // moving = true;
         // t = 0.0f;
 
