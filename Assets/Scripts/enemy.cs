@@ -32,14 +32,7 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (gameObject.tag.Equals("Red"))
-        {
-            RedCreature = true;
-        }
-        else
-        {
-            RedCreature = false;
-        }
+        
         // rb = gameObject.AddComponent<Rigidbody2D>() as Rigidbody2D;
         curHp = maxHP;
         // rb.bodyType = RigidbodyType2D.Dynamic;
@@ -146,4 +139,6 @@ public class enemy : MonoBehaviour
             }
         }
     }
+
+
 }

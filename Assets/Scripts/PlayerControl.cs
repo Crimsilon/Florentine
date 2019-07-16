@@ -17,8 +17,18 @@ public class PlayerControl : MonoBehaviour
     const float k_GroundedRadius = .1f;                     // Radius of the overlap circle to determine if grounded
     public Animator animator;
     public bool crouch;
-    
+    public bool canFire;
+    public float hitStunDuration;
+    public float flashSpeed;
+
     // Update is called once per frame
+    private void Start()
+    {
+        Physics2D.IgnoreLayerCollision(10, 10, true);
+
+        canFire = true;
+    }
+
 
     private void FixedUpdate()
     {
@@ -102,5 +112,70 @@ public class PlayerControl : MonoBehaviour
             animator.SetBool("IsCrouching", false);
         }
     }
+
+    //check if hit by an an enemy and assign hit stun;
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+            bopped();
+    }
+
+    public void bopped()
+    {
+        StartCoroutine(Hit());
+    }
+
+    IEnumerator Hit()
+    {
+        // gameObject.GetComponent<Rigidbody2D>().Sleep();
+
+        // gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        Physics2D.IgnoreLayerCollision(9, 10, true);
+
+        StartCoroutine(EnableBox(hitStunDuration));
+
+        StartCoroutine(Flash());
+        canFire = false;
+        yield return new WaitForSeconds(hitStunDuration);
+        canFire = true;
+    }
+
+    IEnumerator Flash()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+        yield return new WaitForSeconds(flashSpeed);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+    }
+   
+
+
+    IEnumerator EnableBox(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Physics2D.IgnoreLayerCollision(9, 10, false);
+
+        //gameObject.GetComponent<Rigidbody2D>().WakeUp();
+
+        // gameObject.GetComponent<BoxCollider2D>().enabled = true;
+    }
+
 
 }

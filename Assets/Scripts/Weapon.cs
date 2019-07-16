@@ -12,34 +12,36 @@ public class Weapon : MonoBehaviour
     public Animator animator;
     // Update is called once per frame
 
-   
+
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            if (gameObject.GetComponent<PlayerControl>().crouch)
+        if (gameObject.GetComponent<PlayerControl>().canFire) {
+            if (Input.GetButtonDown("Fire1"))
             {
-                
-                if (gameObject.GetComponent<PlayerControl>().facingRight)
-                    GameObject.Instantiate(projectileRight, crouchShot.position, Quaternion.identity);
+                if (gameObject.GetComponent<PlayerControl>().crouch)
+                {
+
+                    if (gameObject.GetComponent<PlayerControl>().facingRight)
+                        GameObject.Instantiate(projectileRight, crouchShot.position, Quaternion.identity);
+                    else
+                        GameObject.Instantiate(projectileLeft, crouchShot.position, projectileLeft.transform.rotation);
+
+                }
                 else
-                    GameObject.Instantiate(projectileLeft, crouchShot.position, projectileLeft.transform.rotation);
+                {
+                    animator.SetTrigger("shot");
+                    if (gameObject.GetComponent<PlayerControl>().facingRight)
+                        GameObject.Instantiate(projectileRight, shotLocation.position, Quaternion.identity);
+                    else
+                        GameObject.Instantiate(projectileLeft, shotLocation.position, projectileLeft.transform.rotation);
+                }
+
+
 
             }
-            else
-            {
-                animator.SetTrigger("shot");
-                if (gameObject.GetComponent<PlayerControl>().facingRight)
-                    GameObject.Instantiate(projectileRight, shotLocation.position, Quaternion.identity);
-                else
-                    GameObject.Instantiate(projectileLeft, shotLocation.position, projectileLeft.transform.rotation);
-            }
 
-          
 
         }
-
-
     }
 }

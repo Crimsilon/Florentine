@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3650080286901433792}
   - component: {fileID: 8946841331179594121}
   - component: {fileID: 8946841331179594134}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wearwolf
-  m_TagString: Red
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
