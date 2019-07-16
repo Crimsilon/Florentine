@@ -22,7 +22,7 @@ public class Weapon : MonoBehaviour
             if(gameObject.GetComponent<PlayerControl>().facingRight)
                 GameObject.Instantiate(projectileRight, shotLocation.position, Quaternion.identity);
             else
-                GameObject.Instantiate(projectileLeft, shotLocation.position, Quaternion.identity);
+                GameObject.Instantiate(projectileLeft, shotLocation.position, projectileLeft.transform.rotation);
 
         }
 

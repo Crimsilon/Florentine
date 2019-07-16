@@ -182,7 +182,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 7400252520083398793}
   moveSpeed: 1.3
   jumpPower: 6
-  facingRight: 1
+  facingRight: 0
   grounded: 0
   animator: {fileID: 7912502132893021553}
 --- !u!114 &7400252519751586974
