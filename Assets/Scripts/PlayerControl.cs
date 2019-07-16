@@ -49,6 +49,10 @@ public class PlayerControl : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().velocity = movement;
         }
+        else
+        {
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+        }
         animator.SetFloat("Speed", (Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x)/10));
 
         animator.SetFloat("YVelocity", (Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.y) / 10));

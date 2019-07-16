@@ -51,7 +51,7 @@ public class enemy : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
 
@@ -64,18 +64,20 @@ public class enemy : MonoBehaviour
         // moving = true;
         // t = 0.0f;
 
-        //transparency of sprite control
+
+        //transparency of sprite control dont try to think about it, it just works
+
         if (RedCreature)
         {
             if (RedCreature == true && !DimensionControl.GetComponent<WorldSwap>().blueActive)
             {
-                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
 
             }
             else
             {
 
-                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
 
             }
         }
@@ -83,14 +85,14 @@ public class enemy : MonoBehaviour
         {
             if (RedCreature != true && DimensionControl.GetComponent<WorldSwap>().blueActive)
             {
-                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
 
 
             }
             else
             {
 
-                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
 
             }
         }
