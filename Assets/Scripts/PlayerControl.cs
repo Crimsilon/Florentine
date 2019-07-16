@@ -68,7 +68,7 @@ public class PlayerControl : MonoBehaviour
     
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && grounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) || (Input.GetButtonDown("Jump") && grounded == true))
         { 
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpPower;
         }
@@ -86,7 +86,8 @@ public class PlayerControl : MonoBehaviour
     void isCrouching()
     {
 
-        if (Input.GetKeyDown(KeyCode.S))
+        bool joystickCrouch = (Input.GetAxis("crouch") != 0f);
+        if (Input.GetKeyDown(KeyCode.S) || joystickCrouch)
         {
             crouch = true;
             animator.SetBool("IsCrouching", true);
