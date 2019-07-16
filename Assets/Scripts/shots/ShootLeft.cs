@@ -14,7 +14,7 @@ public class ShootLeft : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        gameObject.transform.rotation.Set( 0, 0, -180, 0);
+       // gameObject.transform.rotation.Set( 0, 0, -180, 0);
     }
 
     // Update is called once per frame
