@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7400252519689073534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.234, y: 0.132, z: 0}
+  m_LocalPosition: {x: -0.234, y: 0.168, z: 0}
   m_LocalScale: {x: 5.325992, y: 5.325992, z: 5.325992}
   m_Children: []
   m_Father: {fileID: 7400252519751586969}
@@ -65,6 +65,7 @@ Transform:
   m_Children:
   - {fileID: 7400252520083398793}
   - {fileID: 7400252519689073535}
+  - {fileID: 2724737994124952290}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -154,7 +155,7 @@ BoxCollider2D:
   m_Offset: {x: -0.032500267, y: 0.16865799}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.64, y: -0}
     oldSize: {x: 0.25, y: 0.29}
     newSize: {x: 10.24, y: 10.24}
     adaptiveTilingThreshold: 0.5
@@ -185,6 +186,7 @@ MonoBehaviour:
   facingRight: 0
   grounded: 0
   animator: {fileID: 7912502132893021553}
+  crouch: 0
 --- !u!114 &7400252519751586974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +204,7 @@ MonoBehaviour:
   projectileLeft: {fileID: 3991420072480181976, guid: 6b1541e7c0f72fa44a4745790c8f1b4a,
     type: 3}
   shotLocation: {fileID: 7400252519689073535}
+  crouchShot: {fileID: 2724737994124952290}
 --- !u!95 &7912502132893021553
 Animator:
   serializedVersion: 3
@@ -250,4 +253,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7400252519751586969}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8014121475376176789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2724737994124952290}
+  m_Layer: 0
+  m_Name: CrouchShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2724737994124952290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014121475376176789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.228, y: 0.054, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7400252519751586969}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

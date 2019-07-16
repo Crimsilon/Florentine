@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     public bool grounded= false;
     const float k_GroundedRadius = .1f;                     // Radius of the overlap circle to determine if grounded
     public Animator animator;
+    public bool crouch;
     
     // Update is called once per frame
 
@@ -39,7 +40,8 @@ public class PlayerControl : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         
         Jump();
-        
+        isCrouching();
+ 
         Vector2 movement = new Vector2(moveInput * moveSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 
         gameObject.GetComponent<Rigidbody2D>().velocity = movement;
@@ -76,6 +78,21 @@ public class PlayerControl : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
         
+    }
+
+    void isCrouching()
+    {
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            crouch = true;
+            animator.SetBool("IsCrouching", true);
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            crouch = false;
+            animator.SetBool("IsCrouching", false);
+        }
     }
 
 }
