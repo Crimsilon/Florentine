@@ -796,5 +796,10 @@ PrefabInstance:
       propertyPath: jumpPower
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7400252519751586965, guid: 96f1111318919434f98efa346588c2ba,
+        type: 3}
+      propertyPath: facingRight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96f1111318919434f98efa346588c2ba, type: 3}
