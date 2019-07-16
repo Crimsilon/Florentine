@@ -42,7 +42,7 @@ public class Hub : MonoBehaviour
             }
 
         
-            float HubHP = curHealth / maxHealth;
+            float HubHP = (curHealth / maxHealth)/2;
             setHealthBar(HubHP);
     }
 

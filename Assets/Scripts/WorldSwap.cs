@@ -13,6 +13,7 @@ public class WorldSwap : MonoBehaviour
     private void Start()
     {
         blueActive = false;
+        blueScreen.SetActive(false);
     }
 
     // Update is called once per frame
