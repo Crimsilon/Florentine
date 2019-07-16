@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButtonDown("Fire1"))
         {
             if(gameObject.GetComponent<PlayerControl>().facingRight)
                 GameObject.Instantiate(projectileRight, shotLocation.position, Quaternion.identity);
