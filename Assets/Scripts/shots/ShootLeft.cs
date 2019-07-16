@@ -6,7 +6,7 @@ public class ShootLeft : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody2D rb;
-    public int Pspeed;
+    public float Pspeed;
     [SerializeField] public GameObject player;
     public float damage;
     public GameObject impactEffect;
@@ -14,7 +14,7 @@ public class ShootLeft : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-      
+        gameObject.transform.rotation.Set( 0, 0, -180, 0);
     }
 
     // Update is called once per frame

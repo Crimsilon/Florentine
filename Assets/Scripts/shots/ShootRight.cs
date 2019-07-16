@@ -6,10 +6,11 @@ public class ShootRight : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody2D rb;
-    public int Pspeed;
-    [SerializeField] public GameObject player;
+
+    public float Pspeed;
+    
     public float damage;
-    public GameObject impactEffect;
+    
     // Start is called before the first frame update
     void Start()
     {

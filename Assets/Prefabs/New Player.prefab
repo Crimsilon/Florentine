@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7400252519689073534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -0.2, z: 0}
+  m_LocalPosition: {x: -0.234, y: 0.132, z: 0}
   m_LocalScale: {x: 5.325992, y: 5.325992, z: 5.325992}
   m_Children: []
   m_Father: {fileID: 7400252519751586969}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 7400252520083398793}
   moveSpeed: 1.3
   jumpPower: 6
-  facingRight: 0
+  facingRight: 1
   grounded: 0
   animator: {fileID: 7912502132893021553}
 --- !u!114 &7400252519751586974
@@ -197,9 +197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5ccc51712c0a048a4024b9b4d6214d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileRight: {fileID: 6002374100701352144, guid: 76a94492560174a47902b9580db2428f,
+  projectileRight: {fileID: 4273340398240614795, guid: be6f33522e08a9c45a7e32b2abec5075,
     type: 3}
-  projectileLeft: {fileID: 162133808634854671, guid: f642a32a875951645821ac1cf3990f26,
+  projectileLeft: {fileID: 3991420072480181976, guid: 6b1541e7c0f72fa44a4745790c8f1b4a,
     type: 3}
   shotLocation: {fileID: 7400252519689073535}
 --- !u!95 &7912502132893021553
