@@ -1440,7 +1440,7 @@ GameObject:
   - component: {fileID: 1042207380}
   m_Layer: 0
   m_Name: Gate
-  m_TagString: Untagged
+  m_TagString: Hub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1533,7 +1533,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.40771437, y: 0.12198281}
@@ -2564,6 +2564,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400252519751586968, guid: 96f1111318919434f98efa346588c2ba,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400252519751586965, guid: 96f1111318919434f98efa346588c2ba,
+        type: 3}
+      propertyPath: facingRight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96f1111318919434f98efa346588c2ba, type: 3}
