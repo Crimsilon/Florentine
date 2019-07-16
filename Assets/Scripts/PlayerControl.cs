@@ -86,7 +86,8 @@ public class PlayerControl : MonoBehaviour
     void isCrouching()
     {
 
-        if (Input.GetKeyDown(KeyCode.S))
+        bool joystickCrouch = (Input.GetAxis("crouch") != 0f);
+        if (Input.GetKeyDown(KeyCode.S) || joystickCrouch)
         {
             crouch = true;
             animator.SetBool("IsCrouching", true);
