@@ -34,11 +34,15 @@ public class Hub : MonoBehaviour
     {
 
         print("brah");
+
             curHealth -= damage;
+
             print(curHealth);
+
             if (curHealth<= 0)
             {
-               // Die();
+                print("quit");
+                Application.Quit();
             }
 
         
