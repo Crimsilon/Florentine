@@ -55,28 +55,45 @@ public class enemy : MonoBehaviour
     void Update()
     {
 
-        if(pigglet == true) 
-            rb.velocity = new Vector2(speed* direction, rb.velocity.y);
+        if (pigglet == true)
+            rb.velocity = new Vector2(speed * direction, rb.velocity.y);
 
-        else if(wearwolf == true){
+        else if (wearwolf == true) {
             rb.velocity = new Vector2(speed * direction, rb.velocity.y);
         }
         // moving = true;
         // t = 0.0f;
 
         //transparency of sprite control
-
-        if(RedCreature == true && !DimensionControl.GetComponent<WorldSwap>().blueActive)
+        if (RedCreature)
         {
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);
-            
+            if (RedCreature == true && !DimensionControl.GetComponent<WorldSwap>().blueActive)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+
+            }
+            else
+            {
+
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+
+            }
         }
-        if (RedCreature != true && DimensionControl.GetComponent<WorldSwap>().blueActive)
+        else
         {
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);
+            if (RedCreature != true && DimensionControl.GetComponent<WorldSwap>().blueActive)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
 
+
+            }
+            else
+            {
+
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+
+            }
         }
-
 
     }
 
