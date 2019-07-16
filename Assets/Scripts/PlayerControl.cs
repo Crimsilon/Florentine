@@ -68,7 +68,7 @@ public class PlayerControl : MonoBehaviour
     
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && grounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) || (Input.GetButtonDown("Jump") && grounded == true))
         { 
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpPower;
         }
