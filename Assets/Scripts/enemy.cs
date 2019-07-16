@@ -64,6 +64,20 @@ public class enemy : MonoBehaviour
         // moving = true;
         // t = 0.0f;
 
+        //transparency of sprite control
+
+        if(RedCreature == true && !DimensionControl.GetComponent<WorldSwap>().blueActive)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);
+            
+        }
+        if (RedCreature != true && DimensionControl.GetComponent<WorldSwap>().blueActive)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);
+
+        }
+
+
     }
 
     public void TakeDamage(float damage)
