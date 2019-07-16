@@ -33,7 +33,7 @@ public class Hub : MonoBehaviour
     public void TakeDamage(float damage)
     {
 
-        print("brah");
+        
 
             curHealth -= damage;
 
@@ -41,7 +41,7 @@ public class Hub : MonoBehaviour
 
             if (curHealth<= 0)
             {
-                print("quit");
+                
                 Application.Quit();
             }
 
