@@ -16,7 +16,7 @@ public class PlayerControl : MonoBehaviour
     public bool grounded= false;
     const float k_GroundedRadius = .1f;                     // Radius of the overlap circle to determine if grounded
     public Animator animator;
-   
+    
     // Update is called once per frame
 
     private void FixedUpdate()
@@ -36,11 +36,8 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
 
-        
         moveInput = Input.GetAxis("Horizontal");
-
-
-        Squating();
+        
         Jump();
         
         Vector2 movement = new Vector2(moveInput * moveSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
@@ -50,7 +47,7 @@ public class PlayerControl : MonoBehaviour
         animator.SetFloat("Speed", (Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x)/10));
 
         animator.SetFloat("YVelocity", (Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.y) / 10));
-        
+
 
         if (facingRight == false && moveInput > 0)
         {
@@ -63,29 +60,10 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
-
-
-    void Squating()
-    {
-        if (Input.GetKeyDown(KeyCode.S) == true)
-        {
-            animator.SetBool("IsSquating", true);
-
-        }
-
-        else if (Input.GetKeyUp(KeyCode.S))
-        {
-            animator.SetBool("IsSquating", false);
-
-
-        }
-
-    }
-
-
+    
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump") && grounded == true)
+        if (Input.GetButtonDown("Jump") && grounded == true)
         { 
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpPower;
         }
