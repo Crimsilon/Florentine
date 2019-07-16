@@ -205,6 +205,7 @@ MonoBehaviour:
     type: 3}
   shotLocation: {fileID: 7400252519689073535}
   crouchShot: {fileID: 2724737994124952290}
+  animator: {fileID: 7912502132893021553}
 --- !u!95 &7912502132893021553
 Animator:
   serializedVersion: 3

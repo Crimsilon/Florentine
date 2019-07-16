@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
     public GameObject projectileLeft;
     [SerializeField] public Transform shotLocation;
     [SerializeField] public Transform crouchShot;
-   
+    public Animator animator;
     // Update is called once per frame
 
    
@@ -20,6 +20,7 @@ public class Weapon : MonoBehaviour
         {
             if (gameObject.GetComponent<PlayerControl>().crouch)
             {
+                
                 if (gameObject.GetComponent<PlayerControl>().facingRight)
                     GameObject.Instantiate(projectileRight, crouchShot.position, Quaternion.identity);
                 else
@@ -28,6 +29,7 @@ public class Weapon : MonoBehaviour
             }
             else
             {
+                animator.SetTrigger("shot");
                 if (gameObject.GetComponent<PlayerControl>().facingRight)
                     GameObject.Instantiate(projectileRight, shotLocation.position, Quaternion.identity);
                 else
