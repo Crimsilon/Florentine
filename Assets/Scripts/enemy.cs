@@ -32,6 +32,8 @@ public class enemy : MonoBehaviour
 
     private GameObject DimensionControl;
 
+    public Animator animator;
+
     //what type of Ai/enemy behavior to run
 
     public bool pigglet;
@@ -49,6 +51,13 @@ public class enemy : MonoBehaviour
         DimensionControl = GameObject.Find("dimension Control");
 
         rb = gameObject.GetComponent<Rigidbody2D>();
+
+        if (Hopper == true)
+        {
+
+            StartCoroutine(Hops());
+
+        }
     }
 
    
@@ -63,7 +72,7 @@ public class enemy : MonoBehaviour
         }
         else if(Hopper == true)
         {
-            StartCoroutine(Hops());
+               // code for the hopper is in the start and a coroutine Hops
         }
         // moving = true;
         // t = 0.0f;
@@ -149,10 +158,22 @@ public class enemy : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(hopFreq);
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(hopX*hopPower, hopY*hopPower));           
-        }
 
+            StartCoroutine("HopsAnim");
+
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(hopX * hopPower, hopY * hopPower);
+            yield return new WaitForSeconds(hopFreq);
+            
+        }
+        
+
+    }
+
+    IEnumerator HopsAnim()
+    {
+        animator.SetBool("Jump", true);
+        yield return new WaitForSeconds(1);
+        animator.SetBool("Jump", false);
     }
 
 }
