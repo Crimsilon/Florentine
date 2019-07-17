@@ -162,7 +162,9 @@ public class enemy : MonoBehaviour
             StartCoroutine("HopsAnim");
 
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(hopX * hopPower, hopY * hopPower);
+
             yield return new WaitForSeconds(hopFreq);
+
             
         }
         
@@ -172,8 +174,10 @@ public class enemy : MonoBehaviour
     IEnumerator HopsAnim()
     {
         animator.SetBool("Jump", true);
-        yield return new WaitForSeconds(1);
-        animator.SetBool("Jump", false);
+
+        yield return new WaitForSeconds(.5f);
+
+        //animator.SetBool("Jump", false);
     }
 
 }
