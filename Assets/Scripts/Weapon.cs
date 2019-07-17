@@ -17,7 +17,8 @@ public class Weapon : MonoBehaviour
     {
 
         if (gameObject.GetComponent<PlayerControl>().canFire) {
-            if (Input.GetButtonDown("Fire1"))
+         
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
             {
                 if (gameObject.GetComponent<PlayerControl>().crouch)
                 {
