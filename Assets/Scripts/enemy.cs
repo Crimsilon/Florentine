@@ -32,14 +32,7 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (gameObject.tag.Equals("Red"))
-        {
-            RedCreature = true;
-        }
-        else
-        {
-            RedCreature = false;
-        }
+        
         // rb = gameObject.AddComponent<Rigidbody2D>() as Rigidbody2D;
         curHp = maxHP;
         // rb.bodyType = RigidbodyType2D.Dynamic;
@@ -51,18 +44,51 @@ public class enemy : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
 
-        if(pigglet == true) 
-            rb.velocity = new Vector2(speed* direction, rb.velocity.y);
+        if (pigglet == true)
+            rb.velocity = new Vector2(speed * direction, rb.velocity.y);
 
-        else if(wearwolf == true){
+        else if (wearwolf == true) {
             rb.velocity = new Vector2(speed * direction, rb.velocity.y);
         }
         // moving = true;
         // t = 0.0f;
+
+
+        //transparency of sprite control dont try to think about it, it just works
+
+        if (RedCreature)
+        {
+            if (RedCreature == true && !DimensionControl.GetComponent<WorldSwap>().blueActive)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+
+            }
+            else
+            {
+
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+
+            }
+        }
+        else
+        {
+            if (RedCreature != true && DimensionControl.GetComponent<WorldSwap>().blueActive)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+
+
+            }
+            else
+            {
+
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+
+            }
+        }
 
     }
 
@@ -113,4 +139,6 @@ public class enemy : MonoBehaviour
             }
         }
     }
+
+
 }

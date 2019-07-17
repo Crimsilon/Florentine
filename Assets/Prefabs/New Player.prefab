@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7400252519751586965}
   - component: {fileID: 7400252519751586974}
   - component: {fileID: 7912502132893021553}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,6 +187,9 @@ MonoBehaviour:
   grounded: 0
   animator: {fileID: 7912502132893021553}
   crouch: 0
+  canFire: 0
+  hitStunDuration: 1
+  flashSpeed: 0.1
 --- !u!114 &7400252519751586974
 MonoBehaviour:
   m_ObjectHideFlags: 0
