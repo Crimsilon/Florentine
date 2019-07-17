@@ -22,12 +22,21 @@ public class enemy : MonoBehaviour
    
     public float hubDamage;
 
+    public float hopFreq;
+
+    public float hopX;
+
+    public float hopY;
+
+    public float hopPower;
+
     private GameObject DimensionControl;
 
     //what type of Ai/enemy behavior to run
 
     public bool pigglet;
     public bool wearwolf;
+    public bool Hopper;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +47,6 @@ public class enemy : MonoBehaviour
         // rb.bodyType = RigidbodyType2D.Dynamic;
 
         DimensionControl = GameObject.Find("dimension Control");
-
-
 
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -54,6 +61,10 @@ public class enemy : MonoBehaviour
         else if (wearwolf == true) {
             rb.velocity = new Vector2(speed * direction, rb.velocity.y);
         }
+        else if(Hopper == true)
+        {
+            StartCoroutine(Hops());
+        }
         // moving = true;
         // t = 0.0f;
 
@@ -65,13 +76,10 @@ public class enemy : MonoBehaviour
             if (RedCreature == true && !DimensionControl.GetComponent<WorldSwap>().blueActive)
             {
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-
             }
             else
             {
-
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
-
             }
         }
         else
@@ -121,8 +129,6 @@ public class enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-
-
         Hub enemy = hitInfo.GetComponent<Hub>();
         if (enemy != null)
         {
@@ -139,6 +145,14 @@ public class enemy : MonoBehaviour
             }
         }
     }
+    IEnumerator Hops()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(hopFreq);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(hopX*hopPower, hopY*hopPower));           
+        }
 
+    }
 
 }

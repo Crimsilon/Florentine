@@ -44,7 +44,7 @@ public class PlayerControl : MonoBehaviour
                 grounded = true;
         }
 
-        print(Input.GetAxis("crouch"));
+        //print(Input.GetAxis("crouch"));
     }
     void Update()
     {
