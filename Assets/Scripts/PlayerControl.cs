@@ -43,6 +43,8 @@ public class PlayerControl : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
                 grounded = true;
         }
+
+        print(Input.GetAxis("crouch"));
     }
     void Update()
     {
@@ -112,6 +114,7 @@ public class PlayerControl : MonoBehaviour
             crouch = false;
             animator.SetBool("IsCrouching", false);
         }
+
     }
 
     //check if hit by an an enemy and assign hit stun;
