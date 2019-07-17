@@ -100,7 +100,7 @@ public class PlayerControl : MonoBehaviour
     void isCrouching()
     {
 
-        bool joystickCrouch = (Input.GetAxis("crouch") < 0f);
+        bool joystickCrouch = (Input.GetAxis("crouch") > 0f);
 
         if (Input.GetKeyDown(KeyCode.S) || joystickCrouch)
         {
