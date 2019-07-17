@@ -128,7 +128,7 @@ public class PlayerControl : MonoBehaviour
     IEnumerator Hit()
     {
         // gameObject.GetComponent<Rigidbody2D>().Sleep();
-
+        animator.SetTrigger("Hit");
         // gameObject.GetComponent<BoxCollider2D>().enabled = false;
         Physics2D.IgnoreLayerCollision(9, 10, true);
 
