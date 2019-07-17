@@ -20,7 +20,7 @@ public class WorldSwap : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("dimshift"))
         {
             if (blueActive)
             {
