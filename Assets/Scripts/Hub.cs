@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hub : MonoBehaviour
 {
@@ -41,8 +42,8 @@ public class Hub : MonoBehaviour
 
             if (curHealth<= 0)
             {
-                
-                Application.Quit();
+            Time.timeScale = 0;
+            StartCoroutine("time");
             }
 
         
@@ -50,6 +51,11 @@ public class Hub : MonoBehaviour
             setHealthBar(HubHP);
     }
 
+    IEnumerator time()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+    }
     
 
 }

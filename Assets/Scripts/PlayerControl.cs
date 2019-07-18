@@ -52,6 +52,7 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
+        
 
         moveInput = Input.GetAxis("Horizontal");
         
