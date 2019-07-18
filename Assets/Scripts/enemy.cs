@@ -34,19 +34,26 @@ public class enemy : MonoBehaviour
 
     public Animator animator;
 
+    // only used by the monoclops
+    public GameObject DefendPoint;
+
     //what type of Ai/enemy behavior to run
 
     public bool pigglet;
+    //regular monoclops"basic" runs off wearwolf movemenyt code
     public bool wearwolf;
     public bool Hopper;
-
+    public bool Monoclops_Direct;
     // Start is called before the first frame update
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(4, 8, true);
+
+
+        DefendPoint = GameObject.FindGameObjectWithTag("Hub");
         
-        // rb = gameObject.AddComponent<Rigidbody2D>() as Rigidbody2D;
         curHp = maxHP;
-        // rb.bodyType = RigidbodyType2D.Dynamic;
+        
 
         DimensionControl = GameObject.Find("dimension Control");
 
@@ -67,12 +74,18 @@ public class enemy : MonoBehaviour
         if (pigglet == true)
             rb.velocity = new Vector2(speed * direction, rb.velocity.y);
 
+        //Fun fact the
         else if (wearwolf == true) {
+
             rb.velocity = new Vector2(speed * direction, rb.velocity.y);
         }
         else if(Hopper == true)
         {
                // code for the hopper is in the start and a coroutine Hops
+        }
+        else if (Monoclops_Direct == true)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, DefendPoint.GetComponent<Transform>().position, Time.deltaTime * speed);
         }
         // moving = true;
         // t = 0.0f;
