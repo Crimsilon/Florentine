@@ -12,6 +12,7 @@ public class Hub : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         curHealth = maxHealth;
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -41,15 +42,22 @@ public class Hub : MonoBehaviour
 
             print(curHealth);
             float HubHP = (curHealth / maxHealth);
+        if (HubHP >= 0)
+        {
             setHealthBar(HubHP);
+        }
         if (curHealth<= 0)
             {
+           
+
+            Time.timeScale = .2f;
             StartCoroutine("time");
+            
             player.GetComponent<PlayerControl>().enabled = false;
 
             player.GetComponent<Weapon>().enabled = false;
 
-            Time.timeScale = 0;
+            
 
             
             }
@@ -60,7 +68,7 @@ public class Hub : MonoBehaviour
 
     IEnumerator time()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.8f);
         SceneManager.LoadScene(0);
     }
     
