@@ -40,8 +40,9 @@ public class Hub : MonoBehaviour
             curHealth -= damage;
 
             print(curHealth);
-
-            if (curHealth<= 0)
+            float HubHP = (curHealth / maxHealth);
+            setHealthBar(HubHP);
+        if (curHealth<= 0)
             {
             StartCoroutine("time");
             player.GetComponent<PlayerControl>().enabled = false;
@@ -54,8 +55,7 @@ public class Hub : MonoBehaviour
             }
 
         
-            float HubHP = (curHealth / maxHealth);
-            setHealthBar(HubHP);
+            
     }
 
     IEnumerator time()
