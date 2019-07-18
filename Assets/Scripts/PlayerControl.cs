@@ -112,17 +112,34 @@ public class PlayerControl : MonoBehaviour
     {
 
         bool joystickCrouch = (Input.GetAxis("crouch") > 0f);
-
-        if (Input.GetKeyDown(KeyCode.S) || joystickCrouch)
+        //|| joystickCrouch
+        //|| !joystickCrouch
+        if (Input.GetKeyDown(KeyCode.S) )
         {
+            print("crouch");
             crouch = true;
             animator.SetBool("IsCrouching", true);
         }
-        if (Input.GetKeyUp(KeyCode.S)|| !joystickCrouch)
+        //controller support
+        if (joystickCrouch)
         {
+            print("crouch");
+            crouch = true;
+            animator.SetBool("IsCrouching", true);
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+             print("raise");
             crouch = false;
             animator.SetBool("IsCrouching", false);
         }
+        if (!joystickCrouch && !Input.anyKey)
+        {
+            print("raise");
+            crouch = false;
+            animator.SetBool("IsCrouching", false);
+        }
+
 
     }
 
