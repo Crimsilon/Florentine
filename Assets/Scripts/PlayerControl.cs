@@ -20,11 +20,14 @@ public class PlayerControl : MonoBehaviour
     public bool canFire;
     public float hitStunDuration;
     public float flashSpeed;
+    public bool canTeleport;
 
     // Update is called once per frame
     private void Start()
     {
+        canTeleport = true;
         Physics2D.IgnoreLayerCollision(10, 10, true);
+        Physics2D.IgnoreLayerCollision(10, 11, true);
 
         canFire = true;
     }
@@ -115,6 +118,11 @@ public class PlayerControl : MonoBehaviour
             animator.SetBool("IsCrouching", false);
         }
 
+    }
+
+    public void teleport(Transform trans)
+    {
+        gameObject.GetComponent<Transform>().position = trans.GetComponent<Transform>().position;
     }
 
     //check if hit by an an enemy and assign hit stun;
