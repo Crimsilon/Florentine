@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour
     public float jumpPower;
     public bool facingRight;
     public bool grounded= false;
-    const float k_GroundedRadius = .1f;                     // Radius of the overlap circle to determine if grounded
+    const float k_GroundedRadius = .01f;                     // Radius of the overlap circle to determine if grounded
     public Animator animator;
     public bool crouch;
     public bool canFire;
@@ -48,6 +48,7 @@ public class PlayerControl : MonoBehaviour
         }
 
         //print(Input.GetAxis("crouch"));
+        print(grounded);
     }
     void Update()
     {
@@ -87,8 +88,13 @@ public class PlayerControl : MonoBehaviour
     
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || (Input.GetButtonDown("Jump") && grounded == true))
+         //|| 
+        if ((Input.GetKeyDown(KeyCode.Space) && grounded == true))
         { 
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpPower;
+        }
+        if((Input.GetButtonDown("Jump"))&& grounded == true)
+        {
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpPower;
         }
     }
