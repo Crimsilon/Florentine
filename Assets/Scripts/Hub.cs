@@ -43,10 +43,14 @@ public class Hub : MonoBehaviour
 
             if (curHealth<= 0)
             {
-            player.GetComponent<PlayerControl>().enabled = false;
-            player.GetComponent<Weapon>().enabled = false;
-            Time.timeScale = 0;
             StartCoroutine("time");
+            player.GetComponent<PlayerControl>().enabled = false;
+
+            player.GetComponent<Weapon>().enabled = false;
+
+            Time.timeScale = 0;
+
+            
             }
 
         
