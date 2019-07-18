@@ -8,11 +8,12 @@ public class Hub : MonoBehaviour
     public float maxHealth;
     public float curHealth;
     public GameObject healthBar;
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         curHealth = maxHealth;
-       // InvokeRepeating("decreaseingHealth", 1f, 1f);
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -42,6 +43,8 @@ public class Hub : MonoBehaviour
 
             if (curHealth<= 0)
             {
+            player.GetComponent<PlayerControl>().enabled = false;
+            player.GetComponent<Weapon>().enabled = false;
             Time.timeScale = 0;
             StartCoroutine("time");
             }
