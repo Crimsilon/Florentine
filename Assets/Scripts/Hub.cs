@@ -61,7 +61,7 @@ public class Hub : MonoBehaviour
     IEnumerator time()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+        SceneManager.LoadScene(0);
     }
     
 
