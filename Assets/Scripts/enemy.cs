@@ -138,7 +138,7 @@ public class enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.tag.Equals("Reverse")) ;
+        if (hitInfo.tag.Equals("Reverse"))
         {
             print("bounce");
             direction = direction * -1;
