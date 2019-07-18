@@ -138,7 +138,20 @@ public class enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
+        if (hitInfo.tag.Equals("Reverse")) ;
+        {
+            print("bounce");
+            direction = direction * -1;
+            if (gameObject.GetComponent<SpriteRenderer>().flipX == true)
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+       
         Hub enemy = hitInfo.GetComponent<Hub>();
+        
         if (enemy != null)
         {
 
@@ -152,6 +165,7 @@ public class enemy : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            
         }
     }
     IEnumerator Hops()
@@ -161,7 +175,7 @@ public class enemy : MonoBehaviour
 
             StartCoroutine("HopsAnim");
 
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(hopX * hopPower, hopY * hopPower);
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(hopX * hopPower*direction, hopY * hopPower);
 
             yield return new WaitForSeconds(hopFreq);
 
