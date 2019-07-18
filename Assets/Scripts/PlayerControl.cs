@@ -28,6 +28,7 @@ public class PlayerControl : MonoBehaviour
         canTeleport = true;
         Physics2D.IgnoreLayerCollision(10, 10, true);
         Physics2D.IgnoreLayerCollision(10, 11, true);
+        Physics2D.IgnoreLayerCollision(12, 10, true);
 
         canFire = true;
     }

@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6857420801972277475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.079, y: -0.995, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.575}
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,20 +48,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a9130c3eae75a40a989deede184be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.8
   direction: -1
   maxHP: 100
   damage: 10
-  RedCreature: 1
+  RedCreature: 0
   hubDamage: 10
   hopFreq: 0
   hopX: 0
   hopY: 0
   hopPower: 0
   animator: {fileID: 0}
+  DefendPoint: {fileID: 0}
   pigglet: 0
   wearwolf: 1
   Hopper: 0
+  Monoclops_Direct: 0
 --- !u!50 &6857420801972277474
 Rigidbody2D:
   serializedVersion: 4
